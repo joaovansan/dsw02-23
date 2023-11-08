@@ -1,6 +1,14 @@
+import { sql } from "@vercel/postgres";
+
+export const revalidate =0
+
 export default function NewCourse() {
-    async function saveCourse(){
+    async function saveCourse(formData: FormData){
         "use server"
+        const title = formData.get("title") as string;
+        const description = formData.get("description") as string;
+        const url = formData.get("url") as string;
+        await sql`INSERT INTO courses (title, description,url) VALUES(${title}, ${description}, ${url})`
         console.log("Acessou a função")
     }
     return (
@@ -12,7 +20,6 @@ export default function NewCourse() {
                 <input type="text" name="url" placeholder="Digite a url da imagem" /><br/><br/>
                 <button formAction={saveCourse} className="text-white">Salvar</button>
             </form>
-
         </div>
 
     )
