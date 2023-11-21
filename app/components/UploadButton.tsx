@@ -10,7 +10,7 @@ export default function UploadButton(){
     return(
         <CldUploadButton
         onUpload={handleUpload}
-        uploadPreset="id"
+        uploadPreset="rj5n7npm"
         />
     )
 }
