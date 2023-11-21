@@ -5,6 +5,7 @@ export default function Admin(){
         
         <a href="/admin/course">Listar Curso</a>
         <a href="/admin/course/new">Cadastrar Curso</a>
+        
 
     
 
