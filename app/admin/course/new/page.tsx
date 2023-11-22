@@ -1,8 +1,15 @@
 import { sql } from "@vercel/postgres";
+import { useSearchParams } from "next/navigation";
 
 export const revalidate =0
 
 export default function NewCourse() {
+    useSearchParams,
+}:{
+    searchParams?: {
+        url?:String
+    }
+}
     async function saveCourse(formData: FormData){
         "use server"
         const title = formData.get("title") as string;
