@@ -16,4 +16,6 @@ export default async function Cart({
       ))}
     </div>
   );
+  //teste
+
 }
