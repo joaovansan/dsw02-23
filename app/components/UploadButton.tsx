@@ -1,7 +1,7 @@
 "use client"
 
 import { CldUploadButton } from "next-cloudinary";
-import { useRouter } from "next/router";
+import { useRouter } from "next/navigation";
 
 export default function UploadButton(){
     const router = useRouter()
