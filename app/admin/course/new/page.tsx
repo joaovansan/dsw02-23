@@ -18,8 +18,7 @@ export default function NewCourse({
         "use server"
         const title = formData.get("title") as string;
         const description = formData.get("description") as string;
-        const url = formData.get("url") as string;
-        await sql`INSERT INTO courses (title, description,url) VALUES(${title}, ${description}, ${url})`
+        await sql`INSERT INTO courses (title, description,url) VALUES(${title}, ${description}, ${urlImage})`
         console.log("Acessou a função")
     }
     return (
@@ -28,7 +27,8 @@ export default function NewCourse({
             <form>
                 <input type="text" name="title" placeholder="Digite o Título do Curso"/><br/><br/>
                 <input type="text" name="description" placeholder="Digite a Descriçao do curso"/> <br/><br/>
-                <UploadButton/>
+                <br/>
+                <UploadButton />
                 <button formAction={saveCourse} className="text-white">Salvar</button>
             </form>
         </div>
