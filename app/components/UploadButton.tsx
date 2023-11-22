@@ -3,8 +3,9 @@
 import { CldUploadButton } from "next-cloudinary";
 
 export default function UploadButton(){
+    const router = useRouter()
     function handleUpload( result:any, widget:any){
-        url=${result.info7.url}
+        router.push('?url=${result.info7.url}')
         
         widget.close()
     }
