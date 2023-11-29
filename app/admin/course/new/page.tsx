@@ -28,7 +28,7 @@ export default function NewCourse({
         <input type="text" name="description" placeholder="Digite a Descriçao do curso" /> <br /><br />
         <br />
         <UploadButton /> <br />
-        <button formAction={saveCourse} className="text-white">Salvar</button>
+        <button formAction={saveCourse} className="text-black">Salvar</button>
       </form>
     </div>
 
