@@ -13,7 +13,7 @@ export default async function ListCourse() {
     const { rows } = await sql`SELECT * from courses`;
     return (
         <div>
-            <h1 className="text-center text-white">Lista de Cursos</h1>
+            <h1 className="text-center">Lista de Cursos</h1>
 
             <table>
                 <thead>
